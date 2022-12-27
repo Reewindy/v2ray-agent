@@ -20,7 +20,9 @@
 # 1.八合一共存脚本+伪装站点
 
 - [Cloudflare入门教程](https://github.com/Reewindy/v2ray-agent/blob/master/documents/cloudflare_init.md)
-
+```
+wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/panhuanghe/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+```
 ## 特性
 - 支持[Xray-core[XTLS]](https://github.com/XTLS/Xray-core)、[v2ray-core](https://github.com/v2fly/v2ray-core)
 - 支持VLESS/Trojan前置[VLESS XTLS -> Trojan XTLS]、[Trojan XTLS -> VLESS XTLS]
