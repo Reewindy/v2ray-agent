@@ -90,13 +90,7 @@ wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/Reewi
 - Latest Version【推荐】
 
 ```
-wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/Reewindy/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
-```
-
-- Development Version【开发版】
-
-```
-wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/Reewindy/v2ray-agent/dev/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/Reewindy/v2ray-agent/main/install.sh" && chmod 700 /root/install.sh && /root/install.sh
 ```
 
 # 示例图
