@@ -3686,7 +3686,16 @@ unInstall() {
 	echoContent green " ---> 卸载快捷方式完成"
 	echoContent green " ---> 卸载v2ray-agent脚本完成"
 }
-
+# 测试速度
+selectSpeed() {
+  echoContent green " ---> 测试I/O速度"
+  wget "https://raw.githubusercontent.com/Reewindy/v2ray-agent/main/shell/bench.sh"
+  sudo chmod 700 bench.sh
+  ./bench.sh
+  echoContent green " ---> 测试完成"
+  menu
+	exit 0
+}
 #updateGeoSite
 
 # 修改V2Ray CDN节点
@@ -5434,15 +5443,14 @@ manageHysteria() {
 menu() {
 	cd "$HOME" || exit
 	echoContent red "\n=============================================================="
-	echoContent green "作者:mack-a"
-	echoContent green "当前版本:v2.6.13"
-	echoContent green "Github:https://github.com/panhuanghe/v2ray-agent"
+	echoContent green "作者:Reewindy"
+	echoContent green "原作者:mack-a"
+	echoContent green "当前版本:v2.8"
+	echoContent green "Github:https://github.com/Reewindy/v2ray-agent"
 	echoContent green "描述:八合一共存脚本\c"
 	showInstallStatus
 	echoContent red "\n=============================================================="
-	echoContent red "                        推广区                      "
-	echoContent green "AFF捐赠：免费脚本无需捐助"
-	echoContent red "=============================================================="
+	echoContent yellow "0.网络|IO测速"
 	if [[ -n "${coreInstallType}" ]]; then
 		echoContent yellow "1.重新安装"
 	else
@@ -5481,6 +5489,9 @@ menu() {
 	aliasInstall
 	read -r -p "请选择:" selectInstallType
 	case ${selectInstallType} in
+	0)
+		selectSpeed
+		;;
 	1)
 		selectCoreInstall
 		;;
